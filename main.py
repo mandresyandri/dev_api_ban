@@ -31,9 +31,8 @@ def get_data_by_insee(code_insee):
 @app.route("/is_udpate", methods=["GET"])
 def new_mlf():
     try:
-        data = gd.data_request(92048)  # Exemple de code INSEE pour la règle
-        
-        # Vérifier la règle pour "Place Henry Wolf"
+        data = gd.data_request(92048) 
+    
         for item in data:
             if (item['nom_voie'] == "Place Henry Wolf") and (item['code_postal'] == 92190):
                 return jsonify({
