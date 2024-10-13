@@ -13,7 +13,7 @@ def hello_world():
         "message": "Bienvenue à l'API des adresses. Utilisez les endpoints pour obtenir des données.",
         "endpoints": {
             "/<code_insee>": "Obtenir les données pour un code INSEE spécifique.",
-            "/is_udpate": "Vérifie si les données ont été mises à jours."
+            "/is_update": "Vérifie si les données ont été mises à jours."
         }
     }), 200
 
@@ -28,8 +28,8 @@ def get_data_by_insee(code_insee):
     except Exception as e:
         return jsonify({"error": str(e)}), 500
     
-@app.route("/is_udpate", methods=["GET"])
-def new_mlf():
+@app.route("/is_update", methods=["GET"])
+def is_update():
     try:
         data = gd.data_request(92048) 
         for item in data:
