@@ -21,10 +21,19 @@ Le premier lancement peut prendre quelques secondes supplémentaires en raison d
 - `GET /is_udpate` : Vérifie si les données ont été mises à jour cas spécifique pour les données à Meudon.
 
 ### Exemples d'utilisation
-- Vérifier si les données ont été modifiées --> `https://dev-api-ban.onrender.com/is_udpate`
-- Afficher les données pour la Ville de Meudon --> `https://dev-api-ban.onrender.com/92048`
+- Vérifier si les données ont été modifiées 
+  ```sh
+    https://dev-api-ban.onrender.com/is_udpate
+  ```
+- Afficher les données pour la Ville de Meudon 
+  ```sh
+    https://dev-api-ban.onrender.com/92048
+  ```
 
 ## Installation en local avec Docker (pour les plus courageux)
+Vous pouvez installer l'application sur vos serveurs facilement avec ces deux commandes docker (toutefois, assurez-vous que Docker). 
+
+
 1. Construisez l'image Docker :
 ```sh
 docker-compose build
