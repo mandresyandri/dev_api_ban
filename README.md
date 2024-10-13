@@ -31,7 +31,7 @@ Le premier lancement peut prendre quelques secondes supplémentaires en raison d
   ```
 
 ## Installation en local avec Docker (pour les plus courageux)
-Vous pouvez installer l'application sur vos serveurs facilement avec ces deux commandes docker (toutefois, assurez-vous que Docker). 
+Vous pouvez installer l'application sur vos serveurs/PC facilement avec ces deux commandes docker (toutefois, assurez-vous que Docker soit correctement installé). 
 
 
 1. Construisez l'image Docker :
