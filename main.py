@@ -32,14 +32,12 @@ def get_data_by_insee(code_insee):
 def new_mlf():
     try:
         data = gd.data_request(92048) 
-    
         for item in data:
             if (item['nom_voie'] == "Place Henry Wolf") and (item['code_postal'] == 92190):
                 return jsonify({
                     "Alerte" : "Les codes postaux n'ont pas encore été modifiés",
                     "Action": f"Le code postal pour '{item['nom_voie']}' doit être 92360."
                     }), 400
-        
         return jsonify({
             "message": "Adresse mlf modifiée."
         }), 200
