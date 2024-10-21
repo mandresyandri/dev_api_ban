@@ -22,7 +22,7 @@ def get_data_by_insee(code_insee):
     try:
         data = gd.data_request(code_insee)
         if data:
-            return jsonify(data), 200
+            return jsonify({"result" : data}), 200
         else:
             return jsonify({"error": "Données non trouvées pour le code INSEE fourni."}), 404
     except Exception as e:
